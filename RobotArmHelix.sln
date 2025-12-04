@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelixToolkit", "HelixToolki
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Solutionitems", "0_Solutionitems", "{10EF742E-7177-4392-B3F4-A43CABF5F2A1}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\helix-toolkit-forRobotArm\CHANGELOG.md = ..\..\helix-toolkit-forRobotArm\CHANGELOG.md
-		..\..\helix-toolkit-forRobotArm\DOCUMENTATION.md = ..\..\helix-toolkit-forRobotArm\DOCUMENTATION.md
-		..\..\helix-toolkit-forRobotArm\LICENSE = ..\..\helix-toolkit-forRobotArm\LICENSE
-		..\..\helix-toolkit-forRobotArm\README.md = ..\..\helix-toolkit-forRobotArm\README.md
+		..\helix-toolkit-forRobotArm\CHANGELOG.md = ..\helix-toolkit-forRobotArm\CHANGELOG.md
+		..\helix-toolkit-forRobotArm\DOCUMENTATION.md = ..\helix-toolkit-forRobotArm\DOCUMENTATION.md
+		..\helix-toolkit-forRobotArm\LICENSE = ..\helix-toolkit-forRobotArm\LICENSE
+		..\helix-toolkit-forRobotArm\README.md = ..\helix-toolkit-forRobotArm\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelixToolkit", "..\..\helix-toolkit-forRobotArm\Source\HelixToolkit\HelixToolkit.csproj", "{7C0E987E-CC34-4B19-BA6B-B381AEABB530}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelixToolkit", "..\helix-toolkit-forRobotArm\Source\HelixToolkit\HelixToolkit.csproj", "{7C0E987E-CC34-4B19-BA6B-B381AEABB530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelixToolkit.Wpf", "..\..\helix-toolkit-forRobotArm\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj", "{3F3B4548-A9DB-4874-86F7-E7C4FEC8A351}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelixToolkit.Wpf", "..\helix-toolkit-forRobotArm\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj", "{3F3B4548-A9DB-4874-86F7-E7C4FEC8A351}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Solutionitems_RobotArmHelix", "0_Solutionitems_RobotArmHelix", "{21612A95-4CEF-49C4-8E4F-2CAA1956FCBA}"
 	ProjectSection(SolutionItems) = preProject
@@ -55,6 +55,6 @@ Global
 		SolutionGuid = {1C2BA375-3D30-4ADF-BF0B-3950D0F30011}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\helix-toolkit-forRobotArm\Source\HelixToolkit.Shared\HelixToolkit.Shared.projitems*{3f3b4548-a9db-4874-86f7-e7c4fec8a351}*SharedItemsImports = 4
+		..\helix-toolkit-forRobotArm\Source\HelixToolkit.Shared\HelixToolkit.Shared.projitems*{3f3b4548-a9db-4874-86f7-e7c4fec8a351}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

@@ -28,8 +28,8 @@
 	
 	<!--
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\helix-toolkit\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj" />
-		<ProjectReference Include="..\..\..\helix-toolkit\Source\HelixToolkit\HelixToolkit.csproj" />
+		<ProjectReference Include="..\..\helix-toolkit\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj" />
+		<ProjectReference Include="..\..\helix-toolkit\Source\HelixToolkit\HelixToolkit.csproj" />
 	</ItemGroup>
 	-->
 
@@ -48,8 +48,8 @@
 		-->
 		<Reference Include="System.Windows.Forms" />
 	
-	  <ProjectReference Include="..\..\..\helix-toolkit-forRobotArm\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj" />
-	  <ProjectReference Include="..\..\..\helix-toolkit-forRobotArm\Source\HelixToolkit\HelixToolkit.csproj" />
+	  <ProjectReference Include="..\..\helix-toolkit-forRobotArm\Source\HelixToolkit.Wpf\HelixToolkit.Wpf.csproj" />
+	  <ProjectReference Include="..\..\helix-toolkit-forRobotArm\Source\HelixToolkit\HelixToolkit.csproj" />
 	</ItemGroup>
 
 
