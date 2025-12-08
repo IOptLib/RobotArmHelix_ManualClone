@@ -15,10 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HelixToolkit.Wpf;
 using System.IO;
 using System.Reflection;
-
+using HelixToolkit.Geometry;
+using HelixToolkit.Wpf;
 
 /**
  * Author: Gabriele Marini (Gabryxx7)
@@ -402,7 +402,7 @@ namespace RobotArmHelix
                 reachingPoint = new Vector3D(Double.Parse(TbX.Text), Double.Parse(TbY.Text), Double.Parse(TbZ.Text));
                 geom.Transform = new TranslateTransform3D(reachingPoint);
             }
-            catch (Exception exc)
+            catch (Exception)
             {
 
             }
@@ -538,7 +538,7 @@ namespace RobotArmHelix
                     ((EmissiveMaterial)mg.Children[0]).Color = newColor;
                     ((DiffuseMaterial)mg.Children[1]).Color = newColor;
                 }
-                catch (Exception exc)
+                catch (Exception)
                 {
                     previousColor = oldColor;
                 }
@@ -555,7 +555,7 @@ namespace RobotArmHelix
                 Model3DGroup models = ((Model3DGroup) pModel);
                 oldSelectedModel = models.Children[0] as GeometryModel3D;
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 oldSelectedModel = (GeometryModel3D) pModel;
             }
