@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Windows.Media.Media3D;
 
 namespace RobotArmHelix
@@ -11,10 +12,16 @@ namespace RobotArmHelix
     public class GeometryHelper
     {
 
-        public static GeometryModel3D CreateDebugSphere(Point3D center, double radius, int tDiv, int pDiv)
+        public static GeometryModel3D CreateDebugSphere(
+            Point3D center,
+            double radius,
+            int tDiv,
+            int pDiv,
+            Color color)
         {
             MeshGeometry3D mesh = new MeshGeometry3D();
 
+            // Generate vertices
             for (int pi = 0; pi <= pDiv; pi++)
             {
                 double phi = Math.PI * pi / pDiv;
@@ -30,6 +37,7 @@ namespace RobotArmHelix
                 }
             }
 
+            // Build triangle indices
             for (int pi = 0; pi < pDiv; pi++)
             {
                 for (int ti = 0; ti < tDiv; ti++)
@@ -49,7 +57,12 @@ namespace RobotArmHelix
                 }
             }
 
-            return new GeometryModel3D(mesh, Materials.Brown);
+            // Create material
+            MaterialGroup material = new MaterialGroup();
+            material.Children.Add(new DiffuseMaterial(new SolidColorBrush(color)));
+            material.Children.Add(new SpecularMaterial(new SolidColorBrush(color), 80));
+
+            return new GeometryModel3D(mesh, material);
         }
 
     }
