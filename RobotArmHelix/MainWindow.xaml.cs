@@ -157,7 +157,7 @@ namespace RobotArmHelix
 
             /** Debug sphere to check in which point the joint is rotating**/
             var builder = new MeshBuilder(true, true);
-            var position = new Point3D(0, 0, 0);
+            var position = new System.Numerics.Vector3(0, 0, 0); // Point3D(0, 0, 0);
             builder.AddSphere(position, 50, 15, 15);
             geom = new GeometryModel3D(builder.ToMesh(), Materials.Brown);
             visual = new ModelVisual3D();
