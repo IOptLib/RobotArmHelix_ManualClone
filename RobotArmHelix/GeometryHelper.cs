@@ -21,23 +21,33 @@ namespace RobotArmHelix
         {
             MeshGeometry3D mesh = new MeshGeometry3D();
 
-            // Generate vertices
+            // Generate vertices & normals
             for (int pi = 0; pi <= pDiv; pi++)
             {
                 double phi = Math.PI * pi / pDiv;
+
                 for (int ti = 0; ti <= tDiv; ti++)
                 {
                     double theta = 2 * Math.PI * ti / tDiv;
 
-                    double x = center.X + radius * Math.Sin(phi) * Math.Cos(theta);
-                    double y = center.Y + radius * Math.Sin(phi) * Math.Sin(theta);
-                    double z = center.Z + radius * Math.Cos(phi);
+                    double x = Math.Sin(phi) * Math.Cos(theta);
+                    double y = Math.Sin(phi) * Math.Sin(theta);
+                    double z = Math.Cos(phi);
 
-                    mesh.Positions.Add(new Point3D(x, y, z));
+                    // position
+                    mesh.Positions.Add(new Point3D(
+                        center.X + radius * x,
+                        center.Y + radius * y,
+                        center.Z + radius * z));
+
+                    // normal (unit vector)
+                    Vector3D normal = new Vector3D(x, y, z);
+                    normal.Normalize();
+                    mesh.Normals.Add(normal);
                 }
             }
 
-            // Build triangle indices
+            // Triangles
             for (int pi = 0; pi < pDiv; pi++)
             {
                 for (int ti = 0; ti < tDiv; ti++)
